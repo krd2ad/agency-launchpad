@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import mark from "@/assets/lantern-mark.png";
+import mark from "@/assets/lantern-mark.svg";
 
 export function SiteFooter() {
   return (

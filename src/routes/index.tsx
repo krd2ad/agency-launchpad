@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { FocusCard } from "@/components/FocusCard";
-import mark from "@/assets/lantern-mark.png";
+import mark from "@/assets/lantern-mark.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
