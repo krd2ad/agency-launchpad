@@ -55,12 +55,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
-          <a
-            href="/"
+          <Link
+            to="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
           >
             Go home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -90,14 +90,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
-      { rel: "apple-touch-icon", sizes: "167x167", href: "/apple-touch-icon-167.png" },
-      { rel: "apple-touch-icon", sizes: "152x152", href: "/apple-touch-icon-152.png" },
-      { rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png" },
-      { rel: "icon", type: "image/png", sizes: "512x512", href: "/icon-512.png" },
-      { rel: "manifest", href: "/site.webmanifest" },
-      { rel: "mask-icon", href: "/mask-icon.svg", color: "#00693E" },
+      { rel: "icon", type: "image/svg+xml", href: `${import.meta.env.BASE_URL}favicon.svg` },
+      { rel: "apple-touch-icon", sizes: "180x180", href: `${import.meta.env.BASE_URL}apple-touch-icon.png` },
+      { rel: "apple-touch-icon", sizes: "167x167", href: `${import.meta.env.BASE_URL}apple-touch-icon-167.png` },
+      { rel: "apple-touch-icon", sizes: "152x152", href: `${import.meta.env.BASE_URL}apple-touch-icon-152.png` },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: `${import.meta.env.BASE_URL}icon-192.png` },
+      { rel: "icon", type: "image/png", sizes: "512x512", href: `${import.meta.env.BASE_URL}icon-512.png` },
+      { rel: "manifest", href: `${import.meta.env.BASE_URL}site.webmanifest` },
+      { rel: "mask-icon", href: `${import.meta.env.BASE_URL}mask-icon.svg`, color: "#00693E" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
