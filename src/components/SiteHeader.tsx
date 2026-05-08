@@ -5,7 +5,6 @@ import logo from "@/assets/lantern-header.png";
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
