@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: "./tests",
   reporter: "html",
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:4173/agency-launchpad",
+    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:4173",
   },
   projects: [
     {

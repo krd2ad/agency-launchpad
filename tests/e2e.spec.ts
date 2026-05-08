@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const BASE = process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:4173/agency-launchpad";
+const BASE = process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:4173";
 
 test("home page loads with correct heading", async ({ page }) => {
   await page.goto(`${BASE}/`);
