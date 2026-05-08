@@ -32,7 +32,7 @@ test("navigation from home to contact works", async ({ page }) => {
 
 test("navigation from contact back to home works", async ({ page }) => {
   await page.goto(`${BASE}/contact`);
-  await page.getByRole("link", { name: "Lantern Hill" }).click();
+  await page.getByRole("link", { name: /Lantern Hill Advisory LLC.*home/i }).click();
   await expect(page).toHaveURL(new RegExp(`${BASE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/?$`));
   await expect(page.locator("h1")).toContainText("Practical AI and technology advisory");
 });
