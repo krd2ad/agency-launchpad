@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" fill="none">
+  <!-- Lantern mark on the left -->
+  <g transform="translate(10 -10) scale(0.82)">
+    <g fill="#00693E">
+      <path d="M100 18a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
+      <rect x="96" y="36" width="8" height="8" rx="1.5"/>
+      <path d="M62 64 L100 44 L138 64 Z"/>
+      <rect x="66" y="64" width="68" height="6"/>
+      <rect x="72" y="72" width="56" height="4"/>
+      <path d="M70 80 h60 v68 h-60 z M76 86 h48 v56 h-48 z" fill-rule="evenodd"/>
+      <rect x="98" y="86" width="4" height="56"/>
+      <rect x="68" y="148" width="64" height="6"/>
+      <rect x="74" y="154" width="52" height="8"/>
+      <rect x="80" y="162" width="40" height="6"/>
+    </g>
+    <g stroke="#7DA890" stroke-width="6" stroke-linecap="round">
+      <line x1="84" y1="98" x2="116" y2="130"/>
+      <line x1="116" y1="98" x2="84" y2="130"/>
+    </g>
+    <path d="M16 200 Q70 168 110 188 Q150 208 188 184 L188 208 L16 208 Z" fill="#00693E"/>
+    <path d="M70 198 Q120 178 188 196 L188 208 L70 208 Z" fill="#7DA890"/>
+  </g>
+  <!-- Wordmark -->
+  <g fill="#0B2E22" font-family="'Libre Baskerville', Georgia, serif">
+    <text x="200" y="92" font-size="44" letter-spacing="1">Lantern Hill</text>
+    <text x="200" y="132" font-size="26" letter-spacing="6" fill="#00693E">A D V I S O R Y &#160;&#160;L L C</text>
+  </g>
+</svg>
