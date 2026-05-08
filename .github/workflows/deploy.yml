@@ -1,0 +1,63 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build (static prerender)
+        run: bun run build
+
+      # TanStack Start prerenders pages into dist/ — copy index.html to 404.html
+      # so client-side routes resolve correctly on GitHub Pages refresh / deep links,
+      # and add .nojekyll so files starting with "_" are served.
+      - name: Prepare static output for GitHub Pages
+        run: |
+          # The static client output lives in dist/client when using the
+          # @cloudflare/vite-plugin. Fall back to dist/ if not present.
+          if [ -d dist/client ]; then
+            OUT=dist/client
+          else
+            OUT=dist
+          fi
+          touch "$OUT/.nojekyll"
+          if [ -f "$OUT/index.html" ]; then
+            cp "$OUT/index.html" "$OUT/404.html"
+          fi
+          echo "STATIC_OUT=$OUT" >> $GITHUB_ENV
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.STATIC_OUT }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
