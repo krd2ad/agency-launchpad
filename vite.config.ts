@@ -21,7 +21,6 @@ export default defineConfig({
       autoSubfolderIndex: true,
       pages: [
         { path: "/" },
-        { path: "/about" },
         { path: "/contact" },
       ],
     },
