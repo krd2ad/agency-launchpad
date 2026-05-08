@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Linkedin } from "lucide-react";
 import mark from "@/assets/lantern-mark.svg";
 
 export function SiteFooter() {
@@ -31,6 +32,16 @@ export function SiteFooter() {
               className="mt-3 inline-block text-sm text-foreground/85 hover:text-primary"
             >
               lanternhilladvisory@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/company/lantern-hill-advisory/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex items-center gap-2 text-sm text-foreground/85 hover:text-primary"
+              aria-label="Lantern Hill Advisory on LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" aria-hidden="true" />
+              LinkedIn
             </a>
           </div>
 
