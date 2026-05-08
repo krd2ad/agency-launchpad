@@ -79,23 +79,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Positioning */}
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="font-serif text-3xl leading-tight text-foreground md:text-4xl">
-            Advisory for the messy middle between strategy and implementation.
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Many organizations know they should be doing more with AI,
-            automation, and modern technology, but struggle to translate that
-            ambition into practical next steps. Lantern Hill Advisory works with
-            leaders to clarify priorities, assess current workflows, identify
-            realistic use cases, and build implementation plans that fit the way
-            their teams actually operate.
-          </p>
-        </div>
-      </Section>
-
       {/* Focus Areas */}
       <section className="border-t border-border bg-muted/40">
         <div className="mx-auto max-w-[1200px] px-6 py-20 md:py-28">
