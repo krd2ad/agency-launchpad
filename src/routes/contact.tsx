@@ -41,10 +41,10 @@ function ContactPage() {
             <p className="mt-4 text-sm text-muted-foreground">
               Or write us directly at{" "}
               <a
-                href="mailto:lanternhilladvisory@gmail.com"
+                href="mailto:sales@lanternhilladvisory.com"
                 className="text-primary hover:underline"
               >
-                lanternhilladvisory@gmail.com
+                sales@lanternhilladvisory.com
               </a>
               .
             </p>

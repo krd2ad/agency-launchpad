@@ -28,10 +28,10 @@ export function SiteFooter() {
               Contact
             </p>
             <a
-              href="mailto:lanternhilladvisory@gmail.com"
+              href="mailto:sales@lanternhilladvisory.com"
               className="mt-3 inline-block text-sm text-foreground/85 hover:text-primary"
             >
-              lanternhilladvisory@gmail.com
+              sales@lanternhilladvisory.com
             </a>
             <a
               href="https://www.linkedin.com/company/lantern-hill-advisory/"

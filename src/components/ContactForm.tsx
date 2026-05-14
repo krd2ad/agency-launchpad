@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 
-const EMAIL = "lanternhilladvisory@gmail.com";
+const EMAIL = "sales@lanternhilladvisory.com";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
