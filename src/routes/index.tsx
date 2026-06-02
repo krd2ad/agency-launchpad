@@ -2,6 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { FocusCard } from "@/components/FocusCard";
 import mark from "@/assets/lantern-mark.svg";
+import epicLogo from "@/assets/epic-logo.svg";
+import veevaLogo from "@/assets/veeva-logo.svg";
+import deloitteLogo from "@/assets/deloitte-logo.png";
+import columbiaLogo from "@/assets/columbia-logo.png";
+import dardenLogo from "@/assets/darden-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -75,6 +80,22 @@ function HomePage() {
               alt="Lantern Hill Advisory lantern mark"
               className="h-56 w-auto opacity-90"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-[1200px] px-6 py-10">
+          <p className="mb-8 text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
+            Powered by consultants from
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            <EpicLogo />
+            <VeevaLogo />
+            <DeloitteLogo />
+            <ColumbiaLogo />
+            <DardenLogo />
           </div>
         </div>
       </section>
@@ -153,6 +174,36 @@ function HomePage() {
         </div>
       </section>
     </SiteLayout>
+  );
+}
+
+function EpicLogo() {
+  return (
+    <img src={epicLogo} alt="Epic" className="h-8 w-auto" />
+  );
+}
+
+function VeevaLogo() {
+  return (
+    <img src={veevaLogo} alt="Veeva" className="h-8 w-auto" />
+  );
+}
+
+function DeloitteLogo() {
+  return (
+    <img src={deloitteLogo} alt="Deloitte" className="h-8 w-auto" />
+  );
+}
+
+function ColumbiaLogo() {
+  return (
+    <img src={columbiaLogo} alt="Columbia Business School" className="h-20 w-auto" />
+  );
+}
+
+function DardenLogo() {
+  return (
+    <img src={dardenLogo} alt="Darden School of Business" className="h-14 w-auto" />
   );
 }
 
